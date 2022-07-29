@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <!-- content -->
+    <h1>TMC賣場</h1>
+    <% for(let i = 0;i<productList.length; i ++) { %>
+        <% if(productList[i].category === '3C') { %>
+         <div>商品名稱:<%=productList[i].productName %></div>
+         <%} %>
+    <%  } %>
+
+    <!-- 引入footer -->
+    <%-include("footer.ejs") %>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <label for="name"> 姓名:</label>
+    <input type="text" id="name"/>
+    <label for="age"> 年齡:</label>
+    <input type="number" id="age"/>
+    <label for="email">Email:</label>
+    <input type="text" id="email"/>
+    <label for="department">系別:</label>
+    <input type="text" id="department"/>
+    <button onclick="createStudent()">建立</button>
+    
+    <hr>
+    <label for="id">ID:</label>
+    <input type="number" id="id"/>
+    <label for="age">年齡</label>
+    <input type="number" id="updateAge"/>
+    <button onclick="updateStudent()">更新</button>
+
+    <script>
+        function createStudent(){
+            let insertData = {}
+            insertData.name = $('#name').val()
+            insertData.age = $('#age').val()
+            insertData.email = $('#email').val()
+            insertData.department = $('#department').val()
+            axios.post("/students",insertData)
+        }
+        // function updateStudent(){
+        //     let updateData = {}
+        //     updateData.id = 
+
+        // }
+
+    </script>
+</body>
+</html>
